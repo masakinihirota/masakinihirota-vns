@@ -1,14 +1,14 @@
 'use client'
 
-import Link from 'next/link'
-import { useActionState } from 'react'
-import { useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import type { ActionState } from '@/lib/auth/middleware'
 import { CircleIcon, Loader2 } from 'lucide-react'
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
+import { useActionState } from 'react'
 import { signIn, signUp } from './actions'
-import { ActionState } from '@/lib/auth/middleware'
 
 export function Login({ mode = 'signin' }: { mode?: 'signin' | 'signup' }) {
   const searchParams = useSearchParams()

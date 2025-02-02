@@ -1,6 +1,6 @@
-import Stripe from 'stripe'
 import { handleSubscriptionChange, stripe } from '@/lib/payments/stripe'
-import { NextRequest, NextResponse } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server'
+import type Stripe from 'stripe'
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
 

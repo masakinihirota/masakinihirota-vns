@@ -1,12 +1,12 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
+import { removeTeamMember } from '@/app/(login)/actions'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import type { TeamDataWithMembers, User } from '@/lib/db/schema/originalSchema'
 import { customerPortalAction } from '@/lib/payments/actions'
 import { useActionState } from 'react'
-import { TeamDataWithMembers, User } from '@/lib/db/schema/originalSchema'
-import { removeTeamMember } from '@/app/(login)/actions'
 import { InviteTeamMember } from './invite-team'
 
 type ActionState = {

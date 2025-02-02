@@ -1,18 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import {
-  Settings,
-  LogOut,
-  UserPlus,
-  Lock,
-  UserCog,
-  AlertCircle,
-  UserMinus,
-  Mail,
-  CheckCircle,
-  type LucideIcon
-} from 'lucide-react'
-import { ActivityType } from '@/lib/db/schema/originalSchema'
 import { getActivityLogs } from '@/lib/db/queries'
+import { ActivityType } from '@/lib/db/schema/originalSchema'
+import {
+  AlertCircle,
+  CheckCircle,
+  Lock,
+  LogOut,
+  type LucideIcon,
+  Mail,
+  Settings,
+  UserCog,
+  UserMinus,
+  UserPlus
+} from 'lucide-react'
 
 const iconMap: Record<ActivityType, LucideIcon> = {
   [ActivityType.SIGN_UP]: UserPlus,
