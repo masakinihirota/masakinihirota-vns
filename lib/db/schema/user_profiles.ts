@@ -1,4 +1,4 @@
-import { pgTable, text, uuid, foreignKey } from 'drizzle-orm/pg-core'
+import { foreignKey, pgTable, text, uuid } from 'drizzle-orm/pg-core'
 import { roots } from './roots'
 
 export const userProfiles = pgTable(

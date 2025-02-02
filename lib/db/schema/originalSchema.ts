@@ -1,17 +1,17 @@
+import { relations } from 'drizzle-orm'
 // fork元のスキーマ定義
 // 元のファイル名はschema.ts
 // Drizzleの設定で、1ファイルスキーマから、スキーマフォルダのセッテに変更を下。
 // それで複数のスキーマファイルを作成できるようにした。
 // fork元で更新があったらわかるようにするため。
 import {
+  integer,
   pgTable,
   serial,
-  varchar,
   text,
   timestamp,
-  integer
+  varchar
 } from 'drizzle-orm/pg-core'
-import { relations } from 'drizzle-orm'
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
