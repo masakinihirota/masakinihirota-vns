@@ -1,27 +1,27 @@
 'use server'
 
-import { z } from 'zod'
-import { and, eq, sql } from 'drizzle-orm'
+import { validatedAction, validatedActionWithUser } from '@/lib/auth/middleware'
+import { comparePasswords, hashPassword, setSession } from '@/lib/auth/session'
 import { db } from '@/lib/db/drizzle'
+import { getUser, getUserWithTeam } from '@/lib/db/queries'
 import {
-  User,
-  users,
-  teams,
-  teamMembers,
-  activityLogs,
-  type NewUser,
+  ActivityType,
+  type NewActivityLog,
   type NewTeam,
   type NewTeamMember,
-  type NewActivityLog,
-  ActivityType,
-  invitations
+  type NewUser,
+  type User,
+  activityLogs,
+  invitations,
+  teamMembers,
+  teams,
+  users
 } from '@/lib/db/schema/originalSchema'
-import { comparePasswords, hashPassword, setSession } from '@/lib/auth/session'
-import { redirect } from 'next/navigation'
-import { cookies } from 'next/headers'
 import { createCheckoutSession } from '@/lib/payments/stripe'
-import { getUser, getUserWithTeam } from '@/lib/db/queries'
-import { validatedAction, validatedActionWithUser } from '@/lib/auth/middleware'
+import { and, eq, sql } from 'drizzle-orm'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
+import { z } from 'zod'
 
 async function logActivity(
   teamId: number | null | undefined,
@@ -149,7 +149,7 @@ export const signUp = validatedAction(signUpSchema, async (data, formData) => {
       .from(invitations)
       .where(
         and(
-          eq(invitations.id, parseInt(inviteId)),
+          eq(invitations.id, Number.parseInt(inviteId)),
           eq(invitations.email, email),
           eq(invitations.status, 'pending')
         )
@@ -166,7 +166,6 @@ export const signUp = validatedAction(signUpSchema, async (data, formData) => {
         .where(eq(invitations.id, invitation.id))
 
       await logActivity(teamId, createdUser.id, ActivityType.ACCEPT_INVITATION)
-
       ;[createdTeam] = await db
         .select()
         .from(teams)
@@ -180,7 +179,6 @@ export const signUp = validatedAction(signUpSchema, async (data, formData) => {
     const newTeam: NewTeam = {
       name: `${email}'s Team`
     }
-
     ;[createdTeam] = await db.insert(teams).values(newTeam).returning()
 
     if (!createdTeam) {
@@ -312,7 +310,6 @@ export const deleteAccount = validatedActionWithUser(
           )
         )
     }
-
     ;(await cookies()).delete('session')
     redirect('/sign-in')
   }

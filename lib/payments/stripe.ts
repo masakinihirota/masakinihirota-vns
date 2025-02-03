@@ -1,11 +1,11 @@
-import Stripe from 'stripe'
-import { redirect } from 'next/navigation'
-import { Team } from '@/lib/db/schema/originalSchema'
 import {
   getTeamByStripeCustomerId,
   getUser,
   updateTeamSubscription
 } from '@/lib/db/queries'
+import type { Team } from '@/lib/db/schema/originalSchema'
+import { redirect } from 'next/navigation'
+import Stripe from 'stripe'
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   // Stripeのバージョンアップ

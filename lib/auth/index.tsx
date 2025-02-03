@@ -1,14 +1,14 @@
 'use client'
 
+import type { User } from '@/lib/db/schema/originalSchema'
 import {
+  type ReactNode,
   createContext,
   useContext,
-  ReactNode,
-  useState,
-  useEffect
+  useEffect,
+  useState
 } from 'react'
 import { use } from 'react'
-import { User } from '@/lib/db/schema/originalSchema'
 
 type UserContextType = {
   userPromise: Promise<User | null>
@@ -17,7 +17,7 @@ type UserContextType = {
 const UserContext = createContext<UserContextType | null>(null)
 
 export function useUser(): UserContextType {
-  let context = useContext(UserContext)
+  const context = useContext(UserContext)
   if (context === null) {
     throw new Error('useUser must be used within a UserProvider')
   }
