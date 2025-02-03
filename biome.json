@@ -23,6 +23,9 @@
   },
   "formatter": {
     "enabled": true,
+    "formatWithErrors": false,
+    "ignore": [],
+    "attributePosition": "auto",
     "indentStyle": "space",
     "indentWidth": 2
   },
@@ -43,6 +46,11 @@
       "quoteStyle": "single",
       "jsxQuoteStyle": "single",
       "semicolons": "asNeeded",
+      "trailingCommas": "none"
+    }
+  },
+  "json": {
+    "formatter": {
       "trailingCommas": "none"
     }
   }
