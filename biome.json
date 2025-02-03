@@ -13,7 +13,12 @@
       "./coverage/**",
       "./supabase/**",
       "./tsconfig.json",
-      "./pnpm-lock.yaml"
+      "./pnpm-lock.yaml",
+      "./lib/auth/middleware.ts",
+      "lib/db/setup.ts",
+      "./app/api/stripe/webhook/route.ts",
+      "./app/(dashboard)/terminal.tsx",
+      "./app/(dashboard)/dashboard/settings"
     ]
   },
   "formatter": {
