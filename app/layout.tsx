@@ -44,36 +44,3 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   )
 }
-
-// import { ModeToggle } from "@/components/mode-toggle";
-// import { ThemeProvider } from "@/components/theme-provider"
-// import { UserProvider } from '@/lib/auth';
-// import { getUser } from '@/lib/db/queries';
-
-// interface RootLayoutProps {
-//   children: React.ReactNode
-// }
-
-// export default function RootLayout({ children }: RootLayoutProps) {
-//   let userPromise = getUser();
-//   return (
-//     <>
-//       <html lang="ja" suppressHydrationWarning>
-//         <head />
-//         <body className="">
-//           <UserProvider userPromise={userPromise}>
-//             <ThemeProvider
-//               attribute="class"
-//               defaultTheme="system"
-//               enableSystem
-//               disableTransitionOnChange
-//             >
-//               <ModeToggle />
-//               {children}
-//             </ThemeProvider>
-//           </UserProvider>
-//         </body>
-//       </html>
-//     </>
-//   )
-// }
