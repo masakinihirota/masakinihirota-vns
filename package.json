@@ -16,7 +16,9 @@
     "lint": "biome lint ./",
     "lint:fix": "biome lint --write ./",
     "format": "biome format --write ./",
-    "check": "biome check --write ./"
+    "check": "biome check --write ./",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.2",
@@ -58,6 +60,15 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "lefthook": "^1.10.10"
+    "@chromatic-com/storybook": "3.2.4",
+    "@storybook/addon-essentials": "8.5.3",
+    "@storybook/addon-interactions": "8.5.3",
+    "@storybook/addon-onboarding": "8.5.3",
+    "@storybook/blocks": "8.5.3",
+    "@storybook/nextjs": "8.5.3",
+    "@storybook/react": "8.5.3",
+    "@storybook/test": "8.5.3",
+    "lefthook": "^1.10.10",
+    "storybook": "8.5.3"
   }
 }
