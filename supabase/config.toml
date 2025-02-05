@@ -231,25 +231,25 @@ secret = "env(GITHUB_SECRET)"
 # Overrides the default auth redirectUrl.
 redirect_uri = ""
 
-[auth.external.google]
-enabled = true
-client_id = "env(GOOGLE_CLIENT_ID)"
-secret = "env(GOOGLE_SECRET)"
-# Overrides the default auth redirectUrl.
-redirect_uri = "http://localhost:54321/auth/v1/callback"
+# [auth.external.google]
+# enabled = true
+# client_id = "env(GOOGLE_CLIENT_ID)"
+# secret = "env(GOOGLE_SECRET)"
+# # Overrides the default auth redirectUrl.
+# redirect_uri = "http://localhost:54321/auth/v1/callback"
 
-[auth.external.slack]
-enabled = true
-client_id = "env(SLACK_CLIENT_ID)"
-secret = "env(SLACK_SECRET)"
-# Overrides the default auth redirectUrl.
-redirect_uri = ""
+# [auth.external.slack]
+# enabled = true
+# client_id = "env(SLACK_CLIENT_ID)"
+# secret = "env(SLACK_SECRET)"
+# # Overrides the default auth redirectUrl.
+# redirect_uri = ""
 
-[auth.external.twitter]
-enabled = true
-client_id = "*****"
-secret = "*****"
-redirect_uri = "http://localhost:54321/auth/v1/callback"
+# [auth.external.twitter]
+# enabled = true
+# client_id = "*****"
+# secret = "*****"
+# redirect_uri = "http://localhost:54321/auth/v1/callback"
 
 
 
