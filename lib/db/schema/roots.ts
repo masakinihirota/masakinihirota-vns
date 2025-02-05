@@ -6,7 +6,7 @@ export const roots = pgTable(
   {
     id: uuid('id').primaryKey().notNull(),
     aud: text('aud').notNull(),
-    role: text('role').notNull()
+    email: text('email').notNull()
   },
   (table) => [
     foreignKey({

@@ -5,14 +5,14 @@ language plpgsql
 security definer set search_path = public
 as $$
 begin
-    insert into public.roots (id, aud, role)
-    values (new.id, new.aud, new.role);
+    insert into public.roots (id, aud, email)
+    values (new.id, new.aud, new.email);
     return new;
 end;
 $$;
 
 -- ユーザー作成時に関数を起動するトリガー
-create trigger add_root
+create or replace trigger add_root
     after insert on auth.users
-    for each row execute procedure public.add_root();
+    for each row execute function public.add_root();
 
