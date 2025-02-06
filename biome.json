@@ -10,12 +10,14 @@
     "ignore": [
       "**/node_modules/**",
       "./.next/**",
+      "./.storybook/**",
+      "./stories/**",
       "./coverage/**",
       "./supabase/**",
       "./tsconfig.json",
       "./pnpm-lock.yaml",
       "./lib/auth/middleware.ts",
-      "lib/db/setup.ts",
+      "./db/setup.ts",
       "./app/api/stripe/webhook/route.ts",
       "./app/(dashboard)/terminal.tsx",
       "./app/(dashboard)/dashboard/settings"
@@ -23,6 +25,9 @@
   },
   "formatter": {
     "enabled": true,
+    "formatWithErrors": false,
+    "ignore": [],
+    "attributePosition": "auto",
     "indentStyle": "space",
     "indentWidth": 2
   },
@@ -43,6 +48,11 @@
       "quoteStyle": "single",
       "jsxQuoteStyle": "single",
       "semicolons": "asNeeded",
+      "trailingCommas": "none"
+    }
+  },
+  "json": {
+    "formatter": {
       "trailingCommas": "none"
     }
   }

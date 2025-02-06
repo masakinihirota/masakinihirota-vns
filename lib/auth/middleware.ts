@@ -1,5 +1,5 @@
-import { getTeamForUser, getUser } from '@/lib/db/queries'
-import type { TeamDataWithMembers, User } from '@/lib/db/schema/originalSchema'
+import { getTeamForUser, getUser } from '@/db/queries'
+import type { TeamDataWithMembers, User } from '@/db/schema/originalSchema'
 import { redirect } from 'next/navigation'
 import type { z } from 'zod'
 

@@ -17,7 +17,7 @@ export default defineConfig({
   // フォルダ内にあるスキーマファイルを読み込む
   // schema: "./src/db/schema",
   // フォルダ内にあるスキーマファイルを読み込む
-  schema: './lib/db/schema',
+  schema: './db/schema',
   // Supabase へのマイグレーションファイルを出力するディレクトリ
   out: './supabase/migrations',
   dialect: 'postgresql',

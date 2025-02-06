@@ -1,4 +1,4 @@
-import { getTeamForUser, getUser } from '@/lib/db/queries'
+import { getTeamForUser, getUser } from '@/db/queries'
 import { redirect } from 'next/navigation'
 import { Settings } from './settings'
 

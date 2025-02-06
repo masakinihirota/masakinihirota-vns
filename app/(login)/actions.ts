@@ -1,9 +1,7 @@
 'use server'
 
-import { validatedAction, validatedActionWithUser } from '@/lib/auth/middleware'
-import { comparePasswords, hashPassword, setSession } from '@/lib/auth/session'
-import { db } from '@/lib/db/drizzle'
-import { getUser, getUserWithTeam } from '@/lib/db/queries'
+import { db } from '@/db/drizzle'
+import { getUser, getUserWithTeam } from '@/db/queries'
 import {
   ActivityType,
   type NewActivityLog,
@@ -16,7 +14,9 @@ import {
   teamMembers,
   teams,
   users
-} from '@/lib/db/schema/originalSchema'
+} from '@/db/schema/originalSchema'
+import { validatedAction, validatedActionWithUser } from '@/lib/auth/middleware'
+import { comparePasswords, hashPassword, setSession } from '@/lib/auth/session'
 import { createCheckoutSession } from '@/lib/payments/stripe'
 import { and, eq, sql } from 'drizzle-orm'
 import { cookies } from 'next/headers'

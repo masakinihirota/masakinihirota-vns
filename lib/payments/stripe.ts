@@ -2,8 +2,8 @@ import {
   getTeamByStripeCustomerId,
   getUser,
   updateTeamSubscription
-} from '@/lib/db/queries'
-import type { Team } from '@/lib/db/schema/originalSchema'
+} from '@/db/queries'
+import type { Team } from '@/db/schema/originalSchema'
 import { redirect } from 'next/navigation'
 import Stripe from 'stripe'
 
