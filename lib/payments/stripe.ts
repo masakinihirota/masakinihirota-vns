@@ -3,7 +3,7 @@ import {
   getUser,
   updateTeamSubscription
 } from '@/db/queries'
-import type { Team } from '@/db/schema/originalSchema'
+import type { Team } from '@/db/schema/original/originalSchema'
 import { redirect } from 'next/navigation'
 import Stripe from 'stripe'
 

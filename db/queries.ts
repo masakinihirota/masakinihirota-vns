@@ -7,7 +7,7 @@ import {
   teamMembers,
   teams,
   users
-} from './schema/originalSchema'
+} from './schema/original/originalSchema'
 
 export async function getUser() {
   const sessionCookie = (await cookies()).get('session')

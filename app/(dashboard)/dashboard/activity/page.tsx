@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { getActivityLogs } from '@/db/queries'
-import { ActivityType } from '@/db/schema/originalSchema'
+import { ActivityType } from '@/db/schema/original/originalSchema'
 import {
   AlertCircle,
   CheckCircle,

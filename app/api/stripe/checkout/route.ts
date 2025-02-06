@@ -1,5 +1,5 @@
 import { db } from '@/db/drizzle'
-import { teamMembers, teams, users } from '@/db/schema/originalSchema'
+import { teamMembers, teams, users } from '@/db/schema/original/originalSchema'
 import { setSession } from '@/lib/auth/session'
 import { stripe } from '@/lib/payments/stripe'
 import { eq } from 'drizzle-orm'

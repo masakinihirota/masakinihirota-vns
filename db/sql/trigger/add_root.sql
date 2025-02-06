@@ -1,3 +1,5 @@
+-- 新規ユーザー登録時
+-- auth.usersに行が挿入されたとき、public.rootsに行を挿入するトリガーを作成します。
 -- public.rootsに行を挿入する関数
 create or replace function public.add_root()
 returns trigger
