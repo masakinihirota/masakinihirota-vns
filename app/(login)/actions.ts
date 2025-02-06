@@ -14,7 +14,7 @@ import {
   teamMembers,
   teams,
   users
-} from '@/db/schema/original/originalSchema'
+} from '@/db/schema/originalSchema'
 import { validatedAction, validatedActionWithUser } from '@/lib/auth/middleware'
 import { comparePasswords, hashPassword, setSession } from '@/lib/auth/session'
 import { createCheckoutSession } from '@/lib/payments/stripe'

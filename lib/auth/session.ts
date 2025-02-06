@@ -1,4 +1,4 @@
-import type { NewUser } from '@/db/schema/original/originalSchema'
+import type { NewUser } from '@/db/schema/originalSchema'
 import { compare, hash } from 'bcryptjs'
 import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
