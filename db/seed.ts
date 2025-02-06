@@ -1,5 +1,5 @@
 import { hashPassword } from '@/lib/auth/session'
-import { stripe } from '../payments/stripe'
+import { stripe } from '../lib/payments/stripe'
 import { db } from './drizzle'
 import { teamMembers, teams, users } from './schema/originalSchema'
 

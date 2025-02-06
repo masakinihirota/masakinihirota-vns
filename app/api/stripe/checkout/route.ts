@@ -1,6 +1,6 @@
+import { db } from '@/db/drizzle'
+import { teamMembers, teams, users } from '@/db/schema/originalSchema'
 import { setSession } from '@/lib/auth/session'
-import { db } from '@/lib/db/drizzle'
-import { teamMembers, teams, users } from '@/lib/db/schema/originalSchema'
 import { stripe } from '@/lib/payments/stripe'
 import { eq } from 'drizzle-orm'
 import { type NextRequest, NextResponse } from 'next/server'

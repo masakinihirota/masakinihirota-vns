@@ -1,7 +1,7 @@
 // オリジナルコード
 import './globals.css'
+import { getUser } from '@/db/queries'
 import { UserProvider } from '@/lib/auth'
-import { getUser } from '@/lib/db/queries'
 import type { Metadata, Viewport } from 'next'
 import { Manrope } from 'next/font/google'
 

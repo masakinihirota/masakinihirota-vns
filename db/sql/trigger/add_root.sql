@@ -14,5 +14,5 @@ $$;
 -- ユーザー作成時に関数を起動するトリガー
 create or replace trigger add_root
     after insert on auth.users
-    for each row execute function public.add_root();
+    for each row execute procedure public.add_root();
 
